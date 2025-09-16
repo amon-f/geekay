@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional photography services by GeeKay Studio. Capturing life's most precious moments with creativity and passion.">
+  <meta name="keywords" content="photography, wedding photography, portrait, corporate events, professional photographer">
+  <title>GeeKay Studio | Professional Photography Services</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Masonry Layout -->
+  <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <img src="images/logo.png" alt="GeeKay Studio Logo" class="img-fluid me-2" style="max-height: 40px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home" data-scroll>Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about" data-scroll>About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services" data-scroll>Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio" data-scroll>Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials" data-scroll>Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-primary btn-book" href="#contact">Book a Session</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero-section">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="hero-slide" style="background-image: url('images/moments.jpg');">
+            <div class="container">
+              <div class="hero-content" data-aos="fade-up" data-aos-delay="100">
+                <h1>Capturing Life's Beautiful Moments</h1>
+                <p class="lead">Professional photography services for weddings, portraits, corporate events, and more</p>
+                <div class="hero-buttons">
+                  <a href="#portfolio" class="btn btn-primary me-3">View Portfolio</a>
+                  <a href="#contact" class="btn btn-outline-light">Book a Session</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="hero-slide" style="background-image: url('images/portrait.jpg');">
+            <div class="container">
+              <div class="hero-content" data-aos="fade-up" data-aos-delay="100">
+                <h1>Portrait Stories</h1>
+                <p class="lead">Every face tells a unique story. Let me capture yours.</p>
+                <div class="hero-buttons">
+                  <a href="#portfolio" class="btn btn-primary me-3">View Portraits</a>
+                  <a href="#contact" class="btn btn-outline-light">Book Session</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="hero-slide" style="background-image: url('images/nights.jpg');">
+            <div class="container">
+              <div class="hero-content" data-aos="fade-up" data-aos-delay="100">
+                <h1>Urban Nights</h1>
+                <p class="lead">Capturing the magic of city lights and nightlife</p>
+                <a href="#portfolio" class="btn btn-primary">Explore Gallery</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="hero-slide" style="background-image: url('images/corporate.jpg');">
+            <div class="container">
+              <div class="hero-content" data-aos="fade-up" data-aos-delay="100">
+                <h1>Corporate Events</h1>
+                <p class="lead">Professional photography for your business needs</p>
+                <a href="#services" class="btn btn-primary">Our Services</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="scroll-down">
+      <a href="#about" class="scroll-link" data-scroll>
+        <span class="mouse">
+          <span class="wheel"></span>
+        </span>
+        <span class="scroll-text">Scroll Down</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+          <div class="about-img-container position-relative">
+            <img src="images/about.jpg" alt="About GeeKay Studio" class="img-fluid rounded-4 shadow-lg">
+            <div class="experience-badge">
+              <span class="years">8+</span>
+              <span class="text">Years Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+          <div class="section-header mb-4">
+            <span class="section-subtitle">About Me</span>
+            <h2 class="section-title">Capturing Life's Precious Moments</h2>
+            <div class="section-divider"></div>
+          </div>
+          <p class="lead text-muted mb-4">
+            Welcome to GeeKay Studio, where every photograph tells a story. I'm George Kay, a passionate photographer dedicated to capturing authentic moments with creativity and precision. With over 8 years of experience, I specialize in creating timeless images that you'll cherish for a lifetime.
+          </p>
+          <div class="row g-4 mb-4">
+            <div class="col-md-6">
+              <div class="about-feature">
+                <div class="feature-icon">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <h5>Award Winning</h5>
+                <p class="mb-0">Recognized for excellence in portrait and event photography</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="about-feature">
+                <div class="feature-icon">
+                  <i class="fas fa-camera"></i>
+                </div>
+                <h5>Modern Equipment</h5>
+                <p class="mb-0">Using the latest professional gear for stunning results</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="about-feature">
+                <div class="feature-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <h5>Passion Driven</h5>
+                <p class="mb-0">Committed to capturing your unique story with care</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="about-feature">
+                <div class="feature-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5>5-Star Service</h5>
+                <p class="mb-0">Dedicated to providing an exceptional experience</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-cta">
+            <a href="#portfolio" class="btn btn-primary me-3">View My Work</a>
+            <a href="#contact" class="btn btn-outline-primary">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section py-5 bg-light">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <span class="section-subtitle">What I Offer</span>
+        <h2 class="section-title">Professional Photography Services</h2>
+        <div class="section-divider mx-auto"></div>
+        <p class="section-desc mx-auto">Capturing your special moments with creativity and passion</p>
+      </div>
+      
+      <!-- Services Navigation -->
+      <div class="services-nav" data-aos="fade-up">
+        <div class="nav nav-pills justify-content-center" id="services-tab" role="tablist">
+          <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab">
+            <i class="fas fa-th-large me-2"></i> All Services
+          </button>
+          <button class="nav-link" id="wedding-tab" data-bs-toggle="pill" data-bs-target="#wedding" type="button" role="tab">
+            <i class="fas fa-heart me-2"></i> Weddings
+          </button>
+          <button class="nav-link" id="portrait-tab" data-bs-toggle="pill" data-bs-target="#portrait" type="button" role="tab">
+            <i class="fas fa-user me-2"></i> Portraits
+          </button>
+          <button class="nav-link" id="corporate-tab" data-bs-toggle="pill" data-bs-target="#corporate" type="button" role="tab">
+            <i class="fas fa-briefcase me-2"></i> Corporate
+          </button>
+          <button class="nav-link" id="event-tab" data-bs-toggle="pill" data-bs-target="#event" type="button" role="tab">
+            <i class="fas fa-calendar-alt me-2"></i> Events
+          </button>
+        </div>
+      </div>
+      
+      <!-- Services Content -->
+      <div class="tab-content" id="services-tabContent">
+        <!-- All Services -->
+        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+          <div class="row g-4" id="all-services-container">
+            <!-- Wedding -->
+            <div class="col-lg-4 col-md-6" data-category="wedding">
+              <div class="service-modern-card" style="background-image: url('images/services/wedding.jpg');" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-modern-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <h3>Wedding Photography</h3>
+                <p>Capture the magic of your special day with our professional wedding photography services.</p>
+                <a href="#contact" class="service-modern-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <div class="service-modern-hover">
+                  <ul>
+                    <li><i class="fas fa-check"></i> Full Day Coverage</li>
+                    <li><i class="fas fa-check"></i> Engagement Session</li>
+                    <li><i class="fas fa-check"></i> Online Gallery</li>
+                    <li><i class="fas fa-check"></i> Custom Albums</li>
+                  </ul>
+                  <a href="#contact" class="btn btn-primary btn-sm mt-3">Book Now</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Portrait -->
+            <div class="col-lg-4 col-md-6" data-category="portrait">
+              <div class="service-modern-card" style="background-image: url('images/services/portrait.jpg');" data-aos="fade-up" data-aos-delay="150">
+                <div class="service-modern-icon">
+                  <i class="fas fa-user"></i>
+                </div>
+                <h3>Portrait Sessions</h3>
+                <p>Showcase your unique personality with a professional portrait session for any occasion.</p>
+                <a href="#contact" class="service-modern-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <div class="service-modern-hover">
+                  <ul>
+                    <li><i class="fas fa-check"></i> Studio or Location</li>
+                    <li><i class="fas fa-check"></i> Multiple Outfits</li>
+                    <li><i class="fas fa-check"></i> Professional Editing</li>
+                    <li><i class="fas fa-check"></i> Digital Files</li>
+                  </ul>
+                  <a href="#contact" class="btn btn-primary btn-sm mt-3">Book Now</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Corporate -->
+            <div class="col-lg-4 col-md-6" data-category="corporate">
+              <div class="service-modern-card" style="background-image: url('images/services/corporate.jpg');" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-modern-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Corporate Events</h3>
+                <p>Professional event coverage for conferences, product launches, and corporate gatherings.</p>
+                <a href="#contact" class="service-modern-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <div class="service-modern-hover">
+                  <ul>
+                    <li><i class="fas fa-check"></i> Event Coverage</li>
+                    <li><i class="fas fa-check"></i> Professional Headshots</li>
+                    <li><i class="fas fa-check"></i> Team Photos</li>
+                    <li><i class="fas fa-check"></i> Quick Turnaround</li>
+                  </ul>
+                  <a href="#contact" class="btn btn-primary btn-sm mt-3">Book Now</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Fashion -->
+            <div class="col-lg-4 col-md-6" data-category="fashion">
+              <div class="service-modern-card" style="background-image: url('images/services/fashion.jpg');" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-modern-icon">
+                  <i class="fas fa-tshirt"></i>
+                </div>
+                <h3>Fashion Photography</h3>
+                <p>Showcase your brand or portfolio with high-end fashion photography.</p>
+                <a href="#contact" class="service-modern-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <div class="service-modern-hover">
+                  <ul>
+                    <li><i class="fas fa-check"></i> Lookbook Creation</li>
+                    <li><i class="fas fa-check"></i> Model Portfolios</li>
+                    <li><i class="fas fa-check"></i> E-commerce Ready</li>
+                    <li><i class="fas fa-check"></i> Creative Direction</li>
+                  </ul>
+                  <a href="#contact" class="btn btn-primary btn-sm mt-3">Book Now</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Event -->
+            <div class="col-lg-4 col-md-6" data-category="event">
+              <div class="service-modern-card" style="background-image: url('images/services/event.jpg');" data-aos="fade-up" data-aos-delay="150">
+                <div class="service-modern-icon">
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>Event Photography</h3>
+                <p>Capture the energy and emotion of your special events with our documentary style.</p>
+                <a href="#contact" class="service-modern-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <div class="service-modern-hover">
+                  <ul>
+                    <li><i class="fas fa-check"></i> Candid Moments</li>
+                    <li><i class="fas fa-check"></i> Full Event Coverage</li>
+                    <li><i class="fas fa-check"></i> Fast Delivery</li>
+                    <li><i class="fas fa-check"></i> Digital Gallery</li>
+                  </ul>
+                  <a href="#contact" class="btn btn-primary btn-sm mt-3">Book Now</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product -->
+            <div class="col-lg-4 col-md-6" data-category="product">
+              <div class="service-modern-card" style="background-image: url('images/services/product.jpg');" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-modern-icon">
+                  <i class="fas fa-box"></i>
+                </div>
+                <h3>Product Photography</h3>
+                <p>Make your products stand out with professional product photography.</p>
+                <a href="#contact" class="service-modern-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <div class="service-modern-hover">
+                  <ul>
+                    <li><i class="fas fa-check"></i> White Background</li>
+                    <li><i class="fas fa-check"></i> Lifestyle Shots</li>
+                    <li><i class="fas fa-check"></i> 360° Views</li>
+                    <li><i class="fas fa-check"></i> E-commerce Ready</li>
+                  </ul>
+                  <a href="#contact" class="btn btn-primary btn-sm mt-3">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Individual Category Tabs (Filtered Content) -->
+        <div class="tab-pane fade" id="wedding" role="tabpanel" aria-labelledby="wedding-tab">
+          <div class="row g-4" id="wedding-services-container">
+            <!-- Wedding content will be filtered here -->
+          </div>
+        </div>
+        
+        <div class="tab-pane fade" id="portrait" role="tabpanel" aria-labelledby="portrait-tab">
+          <div class="row g-4" id="portrait-services-container">
+            <!-- Portrait content will be filtered here -->
+          </div>
+        </div>
+        
+        <div class="tab-pane fade" id="corporate" role="tabpanel" aria-labelledby="corporate-tab">
+          <div class="row g-4" id="corporate-services-container">
+            <!-- Corporate content will be filtered here -->
+          </div>
+        </div>
+        
+        <div class="tab-pane fade" id="event" role="tabpanel" aria-labelledby="event-tab">
+          <div class="row g-4" id="event-services-container">
+            <!-- Event content will be filtered here -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5" data-aos="fade-up">
+        <p class="mb-4">Don't see what you're looking for? I offer custom packages tailored to your specific needs.</p>
+        <a href="#contact" class="btn btn-primary">Request a Custom Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio-section py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <span class="section-subtitle">My Work</span>
+        <h2 class="section-title">Portfolio Showcase</h2>
+        <div class="section-divider mx-auto"></div>
+        <p class="section-desc mx-auto">Explore my photography journey through different categories</p>
+      </div>
+      
+      <!-- Portfolio Categories -->
+      <div class="portfolio-categories text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="btn-group" role="group" aria-label="Portfolio Categories">
+          <button type="button" class="btn btn-category active" data-category="all">All Work</button>
+          <button type="button" class="btn btn-category" data-category="wedding">Wedding</button>
+          <button type="button" class="btn btn-category" data-category="portrait">Portrait</button>
+          <button type="button" class="btn btn-category" data-category="fashion">Fashion</button>
+          <button type="button" class="btn btn-category" data-category="corporate">Corporate</button>
+          <button type="button" class="btn btn-category" data-category="event">Events</button>
+        </div>
+      </div>
+      
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid">
+        <div class="row g-4">
+          <!-- Portfolio items will be loaded here via JavaScript -->
+        </div>
+      </div>
+      
+      <div class="text-center mt-5" data-aos="fade-up">
+        <button id="loadMore" class="btn btn-outline-primary">Load More</button>
+      </div>
+    </div>
+    
+    <!-- Portfolio Lightbox -->
+    <div id="portfolioLightbox" class="portfolio-lightbox">
+      <div class="lightbox-content">
+        <button class="lightbox-close">&times;</button>
+        <div class="lightbox-body">
+          <img src="" alt="" class="lightbox-img">
+          <div class="lightbox-caption">
+            <h4 class="lightbox-title"></h4>
+            <span class="lightbox-category"></span>
+          </div>
+        </div>
+        <button class="lightbox-nav prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-nav next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section py-5 bg-light">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <span class="section-subtitle">Client Feedback</span>
+        <h2 class="section-title">What My Clients Say</h2>
+        <div class="section-divider mx-auto"></div>
+        <p class="section-desc mx-auto">Hear from the people I've had the pleasure of working with</p>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            
+            <div class="carousel-inner">
+              <!-- Testimonial 1 -->
+              <div class="carousel-item active">
+                <div class="testimonial-card">
+                  <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <p class="testimonial-text">"Working with GeeKay Studio was an absolute pleasure! The photos from our wedding day are beyond what we could have imagined. They perfectly captured the joy and emotion of our special day. The attention to detail and creativity is unmatched."</p>
+                  <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson" class="testimonial-avatar">
+                    <div class="author-info">
+                      <h5>Sarah Johnson</h5>
+                      <span>Wedding Client</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 2 -->
+              <div class="carousel-item">
+                <div class="testimonial-card">
+                  <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <p class="testimonial-text">"The corporate headshots turned out amazing! The photographer made us all feel comfortable, and the results speak for themselves. We've received countless compliments on our team photos. Highly recommended for any business looking for professional photography."</p>
+                  <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael Chen" class="testimonial-avatar">
+                    <div class="author-info">
+                      <h5>Michael Chen</h5>
+                      <span>CEO, TechCorp Ltd.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 3 -->
+              <div class="carousel-item">
+                <div class="testimonial-card">
+                  <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <p class="testimonial-text">"I was nervous about my portrait session, but the photographer made me feel so comfortable. The final images are stunning and really captured my personality. I've never felt more confident in front of a camera!"</p>
+                  <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez" class="testimonial-avatar">
+                    <div class="author-info">
+                      <h5>Emily Rodriguez</h5>
+                      <span>Portrait Client</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 4 -->
+              <div class="carousel-item">
+                <div class="testimonial-card">
+                  <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <p class="testimonial-text">"We hired GeeKay Studio to capture our annual company gala, and they exceeded all expectations. The photos perfectly captured the energy and excitement of the event. The team was professional, unobtrusive, and delivered stunning images ahead of schedule."</p>
+                  <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David Wilson" class="testimonial-avatar">
+                    <div class="author-info">
+                      <h5>David Wilson</h5>
+                      <span>Event Coordinator, Global Events Inc.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Client Logos -->
+      <div class="client-logos mt-5 pt-4" data-aos="fade-up">
+        <div class="row g-4 align-items-center justify-content-center">
+          <div class="col-6 col-md-2">
+            <div class="client-logo">
+              <img src="https://via.placeholder.com/150x60?text=Client+1" alt="Client Logo" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="client-logo">
+              <img src="https://via.placeholder.com/150x60?text=Client+2" alt="Client Logo" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="client-logo">
+              <img src="https://via.placeholder.com/150x60?text=Client+3" alt="Client Logo" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="client-logo">
+              <img src="https://via.placeholder.com/150x60?text=Client+4" alt="Client Logo" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="client-logo">
+              <img src="https://via.placeholder.com/150x60?text=Client+5" alt="Client Logo" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <span class="section-subtitle">Get In Touch</span>
+        <h2 class="section-title">Contact Me</h2>
+        <div class="section-divider mx-auto"></div>
+        <p class="section-desc mx-auto">Have a project in mind or want to book a session? I'd love to hear from you!</p>
+      </div>
+      
+      <div class="row g-5">
+        <!-- Contact Info -->
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="contact-info">
+            <div class="contact-info-item mb-4">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h5>Location</h5>
+                <p>Otiende, Nairobi</p>
+              </div>
+            </div>
+            
+            <div class="contact-info-item mb-4">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h5>Email Me</h5>
+                <p><a href="mailto:hello@geekaystudio.com">hello@geekaystudio.com</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-info-item mb-4">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h5>Call Me</h5>
+                <p><a href="tel:+254775934179">+254 (775) 934-179</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="far fa-clock"></i>
+              </div>
+              <div class="contact-text">
+                <h5>Working Hours</h5>
+                <p>Monday - Friday: 9am - 6pm<br>Saturday: 10am - 4pm<br>Sunday: Closed</p>
+              </div>
+            </div>
+            
+            <div class="social-links mt-5">
+              <h5 class="mb-3">Follow Me</h5>
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
+          <div class="contact-form">
+            <div class="form-message"></div>
+            <form id="contactForm" class="needs-validation" novalidate>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-group">
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-group">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4">
+                <div class="form-group">
+                  <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required>
+                  <div class="invalid-feedback">Please enter a subject.</div>
+                </div>
+              </div>
+              <div class="mb-4">
+                <div class="form-group">
+                  <textarea name="message" id="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                  <div class="invalid-feedback">Please enter your message.</div>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  <span class="btn-text">Send Message</span>
+                  <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Map -->
+      <div class="map-container mt-5 rounded-3 overflow-hidden" data-aos="fade-up">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.813589799041!2d36.80831997482903!3d-1.2862856355777213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6bf7445dc1%3A0x940b62a3c8efde4c!2sOtiende%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1694760000000!5m2!1sen!2s" 
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer mt-5">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5 class="footer-title">About GeeKay</h5>
+          <p>Capturing timeless memories through creativity, elegance, and passion.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="footer-title">Get in Touch</h5>
+          <p><i class="fas fa-phone-alt me-2"></i> <a href="tel:+254775934179">+254 775 934 179</a></p>
+          <p><i class="fas fa-map-marker-alt me-2"></i> Otiende, Nairobi</p>
+          <p><i class="fas fa-envelope me-2"></i> <a href="mailto:info@geekaystudio.com">info@geekaystudio.com</a></p>
+          <div class="social-icons mt-3">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom py-3 text-center">
+      <p class="mb-0">© 2025 GeeKay Studio | Crafted with ❤</p>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-Top -->
+  <button id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+  <!-- Main JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>
