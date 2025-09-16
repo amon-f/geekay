@@ -311,6 +311,89 @@ document.addEventListener('DOMContentLoaded', function() {
     mirror: false
   });
 
+  // --- About Image Parallax Tilt ---
+  (function() {
+    const aboutWrapper = document.querySelector('.about-image-wrapper');
+    const frame = aboutWrapper ? aboutWrapper.querySelector('.about-img-frame') : null;
+    const badge = aboutWrapper ? aboutWrapper.querySelector('.experience-badge') : null;
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (!aboutWrapper || !frame || prefersReduced || isTouch) return;
+
+    let rafId = null;
+    let current = { rx: 0, ry: 0, sx: 0, sy: 0 };
+    let target = { rx: 0, ry: 0, sx: 0, sy: 0 };
+
+    const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
+
+    const onMove = (e) => {
+      const rect = aboutWrapper.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width; // 0..1
+      const y = (e.clientY - rect.top) / rect.height; // 0..1
+      const maxTilt = 8; // degrees
+      target.ry = clamp((x - 0.5) * 2 * maxTilt, -maxTilt, maxTilt); // rotateY
+      target.rx = clamp(-(y - 0.5) * 2 * maxTilt, -maxTilt, maxTilt); // rotateX
+      const maxOffset = 22; // px
+      target.sx = clamp((x - 0.5) * 2 * maxOffset, -maxOffset, maxOffset);
+      target.sy = clamp((y - 0.5) * 2 * maxOffset, -maxOffset, maxOffset);
+      requestTick();
+    };
+
+    const onLeave = () => {
+      target.rx = 0; target.ry = 0; target.sx = 0; target.sy = 0;
+      requestTick();
+    };
+
+    const update = () => {
+      const lerp = 0.12;
+      current.rx += (target.rx - current.rx) * lerp;
+      current.ry += (target.ry - current.ry) * lerp;
+      current.sx += (target.sx - current.sx) * lerp;
+      current.sy += (target.sy - current.sy) * lerp;
+      frame.style.transform = `rotateX(${current.rx.toFixed(2)}deg) rotateY(${current.ry.toFixed(2)}deg)`;
+      const blur = 40;
+      const spread = -6;
+      const alpha = 0.28;
+      const shadowX = (-current.sx).toFixed(1);
+      const shadowY = (-current.sy + 18).toFixed(1);
+      frame.style.boxShadow = `${shadowX}px ${shadowY}px ${blur}px ${spread}px rgba(0,0,0,${alpha})`;
+
+      // Subtle counter parallax for badge (moves opposite to tilt)
+      if (badge) {
+        const badgeFactor = 0.15; // smaller than image frame
+        const tx = (current.sx * badgeFactor).toFixed(1);
+        const ty = (current.sy * badgeFactor).toFixed(1);
+        badge.style.setProperty('--tx', `${tx}px`);
+        badge.style.setProperty('--ty', `${ty}px`);
+      }
+      if (
+        Math.abs(current.rx - target.rx) > 0.01 ||
+        Math.abs(current.ry - target.ry) > 0.01 ||
+        Math.abs(current.sx - target.sx) > 0.1 ||
+        Math.abs(current.sy - target.sy) > 0.1
+      ) {
+        rafId = requestAnimationFrame(update);
+      } else {
+        rafId = null;
+      }
+    };
+
+    function requestTick() {
+      if (rafId == null) rafId = requestAnimationFrame(update);
+    }
+
+    aboutWrapper.addEventListener('pointermove', onMove);
+    aboutWrapper.addEventListener('pointerleave', onLeave);
+
+    // Cleanup on page hide
+    window.addEventListener('pagehide', () => {
+      aboutWrapper.removeEventListener('pointermove', onMove);
+      aboutWrapper.removeEventListener('pointerleave', onLeave);
+      if (rafId) cancelAnimationFrame(rafId);
+    });
+  })();
+
   // --- Back to Top Button ---
   const backToTopBtn = document.getElementById('backToTop');
   if (backToTopBtn) {
@@ -345,6 +428,29 @@ document.addEventListener('DOMContentLoaded', function() {
       navbar.classList.toggle("scrolled", window.scrollY > 50);
     }
   });
+
+  // --- About CTA Ripple ---
+  (function() {
+    const ctaButtons = document.querySelectorAll('.about-cta .btn');
+    if (!ctaButtons.length) return;
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    ctaButtons.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        if (prefersReduced) return;
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        this.style.setProperty('--ripple-x', `${x}px`);
+        this.style.setProperty('--ripple-y', `${y}px`);
+        this.classList.remove('ripple-animate');
+        // Force reflow to restart animation
+        void this.offsetWidth;
+        this.classList.add('ripple-animate');
+        // Cleanup class after animation ends
+        setTimeout(() => this.classList.remove('ripple-animate'), 650);
+      });
+    });
+  })();
 });
 
 // --- Contact Form Validation ---
